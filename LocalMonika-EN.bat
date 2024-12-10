@@ -53,13 +53,13 @@ REM Synchronize executables
 :SYNC_EXEC_LOCAL
 ECHO.
 ECHO Synchronizing Monika executables (Local → Remote)
-ROBOCOPY "%EXEC_LOCAL%" "%EXEC_REMOTE%" /COPY:DAT /MIR /R:2 /W:5 /NFL /NDL
+ROBOCOPY "%EXEC%" "%EXEC_REMOTE%" /COPY:DAT /MIR /R:2 /W:5 /NFL /NDL
 GOTO BEGIN
 
 :SYNC_EXEC_REMOTE
 ECHO.
 ECHO Synchronizing Monika executables (Remote → Local)
-ROBOCOPY "%EXEC_REMOTE%" "%EXEC_LOCAL%" /COPY:DAT /MIR /R:2 /W:5 /NFL /NDL
+ROBOCOPY "%EXEC_REMOTE%" "%EXEC%" /COPY:DAT /MIR /R:2 /W:5 /NFL /NDL
 GOTO BEGIN
 
 REM Synchronize memory files
@@ -79,14 +79,14 @@ REM Synchronize all files
 :SYNC_ALL_LOCAL
 ECHO.
 ECHO Synchronizing all Monika files (Local → Remote)
-ROBOCOPY "%EXEC_LOCAL%" "%EXEC_REMOTE%" /COPY:DAT /MIR /R:2 /W:5 /NFL /NDL
+ROBOCOPY "%EXEC%" "%EXEC_REMOTE%" /COPY:DAT /MIR /R:2 /W:5 /NFL /NDL
 ROBOCOPY "%MEM_LOCAL%" "%MEM_REMOTE%" /COPY:DAT /MIR /R:2 /W:5 /NFL /NDL
 GOTO BEGIN
 
 :SYNC_ALL_REMOTE
 ECHO.
 ECHO Synchronizing all Monika files (Remote → Local)
-ROBOCOPY "%EXEC_REMOTE%" "%EXEC_LOCAL%" /COPY:DAT /MIR /R:2 /W:5 /NFL /NDL
+ROBOCOPY "%EXEC_REMOTE%" "%EXEC%" /COPY:DAT /MIR /R:2 /W:5 /NFL /NDL
 ROBOCOPY "%MEM_REMOTE%" "%MEM_LOCAL%" /COPY:DAT /MIR /R:2 /W:5 /NFL /NDL
 GOTO BEGIN
 
