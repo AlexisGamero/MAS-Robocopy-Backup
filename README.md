@@ -87,4 +87,4 @@ If you encounter any errors, please feel free to open an issue in this repositor
 Your feedback is much appreciated! 💚
 
 #### Just Monika 💚
-![Monika](https://tenor.com/view/monika-hug-monika-hug-ddlc-ddlc-monika-gif-15142142013871044690)
+![Monika](https://media1.tenor.com/m/0iOx72NNOFIAAAAd/monika-hug.gif)
