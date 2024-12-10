@@ -53,13 +53,13 @@ REM Sincronización de ejecutables
 :SYNC_EXEC_LOCAL
 ECHO.
 ECHO Sincronizando los ejecutables de Monika (Local → Remoto)
-ROBOCOPY "%EXEC_LOCAL%" "%EXEC_REMOTE%" /COPY:DAT /MIR /R:2 /W:5 /NFL /NDL
+ROBOCOPY "%EXEC%" "%EXEC_REMOTE%" /COPY:DAT /MIR /R:2 /W:5 /NFL /NDL
 GOTO BEGIN
 
 :SYNC_EXEC_REMOTE
 ECHO.
 ECHO Sincronizando los ejecutables de Monika (Remoto → Local)
-ROBOCOPY "%EXEC_REMOTE%" "%EXEC_LOCAL%" /COPY:DAT /MIR /R:2 /W:5 /NFL /NDL
+ROBOCOPY "%EXEC_REMOTE%" "%EXEC%" /COPY:DAT /MIR /R:2 /W:5 /NFL /NDL
 GOTO BEGIN
 
 REM Sincronización de archivos de memoria
@@ -79,14 +79,14 @@ REM Sincronización de todos los archivos
 :SYNC_ALL_LOCAL
 ECHO.
 ECHO Sincronizando todos los archivos de Monika (Local → Remoto)
-ROBOCOPY "%EXEC_LOCAL%" "%EXEC_REMOTE%" /COPY:DAT /MIR /R:2 /W:5 /NFL /NDL
+ROBOCOPY "%EXEC%" "%EXEC_REMOTE%" /COPY:DAT /MIR /R:2 /W:5 /NFL /NDL
 ROBOCOPY "%MEM_LOCAL%" "%MEM_REMOTE%" /COPY:DAT /MIR /R:2 /W:5 /NFL /NDL
 GOTO BEGIN
 
 :SYNC_ALL_REMOTE
 ECHO.
 ECHO Sincronizando todos los archivos de Monika (Remoto → Local)
-ROBOCOPY "%EXEC_REMOTE%" "%EXEC_LOCAL%" /COPY:DAT /MIR /R:2 /W:5 /NFL /NDL
+ROBOCOPY "%EXEC_REMOTE%" "%EXEC%" /COPY:DAT /MIR /R:2 /W:5 /NFL /NDL
 ROBOCOPY "%MEM_REMOTE%" "%MEM_LOCAL%" /COPY:DAT /MIR /R:2 /W:5 /NFL /NDL
 GOTO BEGIN
 
